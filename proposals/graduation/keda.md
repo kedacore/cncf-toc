@@ -16,11 +16,6 @@ KEDA's sole focus is to scale applications running on Kubernetes, it is most pow
 
 ![Autoscaling](https://raw.githubusercontent.com/kedacore/governance/main/cncf/graduation/autoscaling-kubernetes-sweetspot.gif)
 
-## KEDA's journey until today
-
-TODO @tomkerkhove - Insert milestones and accomplishments. See previous proposals for examples.
-![History of KEDA](https://raw.githubusercontent.com/kedacore/governance/main/cncf/graduation/history-of-keda.png)
-
 ## KEDA 💝 CNCF
 
 ### KEDA is built on top of Kubernetes
@@ -50,14 +45,21 @@ While KEDA handles the 0 -> 1 & 1 -> 0 scaling, it fully relies on the HPA for a
 
 ## How KEDA has grown since becoming a CNCF Incubation project
 
-### "Fundamental additions"
+### Highlight of recent investments in KEDA
 
-- 6 releases (starting 2.3)
-  - [ ] Scalers & its growth
-  - [ ] Trigger Authentication & its growth
+Since KEDA was accepted as a CNCF Incubation project, we have been working hard to improve the project and have done 6 releases since then (v2.3 and newer).
+
+Every release introduced new scalers and different options to authenticate to external systems and have seen a lot of growth in this area.
+
+For example, KEDA v2.8 now supports 9 authentication providers (50% growth), including major cloud providers and HashiCorp Vault.
+
+![Authentication Provider Growth](https://raw.githubusercontent.com/kedacore/governance/main/cncf/graduation/auth-provider-growth.png)
+
+Our scaler catalog has grown from 32 to 51 scalers (60% growth) in 6 releases:
 
 ![Scaler Growth](https://raw.githubusercontent.com/kedacore/governance/main/cncf/graduation/scaler-growth.png)
-![Authentication Provider Growth](https://raw.githubusercontent.com/kedacore/governance/main/cncf/graduation/auth-provider-growth.png)
+
+As part of this effort, we have integrated Artifact Hub as our centralized place for external scalers to build an ecosystem for external scalers.
 
 - [ ] Image signing with Cosign (https://github.com/kedacore/keda/issues/2386)
 - [ ] ARM Support
