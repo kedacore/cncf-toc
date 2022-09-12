@@ -38,15 +38,15 @@ While KEDA handles the 0 -> 1 & 1 -> 0 scaling, it fully relies on the HPA for a
 
 ### KEDA integrates with the CNCF landscape
 
-    - [ ] Available
-        - Prometheus integration & metrics
-        - Artifact Hub now lists external scalers and are discoverable on keda.sh
-        - Scalers for technologies in CNCF: https://keda.sh/docs/2.8/scalers/
-    - [ ] Interactions with TAG/WG
-        - Environmental Sustainability
-    - [ ] Being added
-        - CloudEvents for extensibility
-        - OpenTelemetry metrics
+- [ ] Available
+    - Prometheus integration & metrics
+    - Artifact Hub now lists external scalers and are discoverable on keda.sh
+    - Scalers for technologies in CNCF: https://keda.sh/docs/2.8/scalers/
+- [ ] Interactions with TAG/WG
+    - Environmental Sustainability
+- [ ] Being added
+    - CloudEvents for extensibility
+    - OpenTelemetry metrics
 
 ## How KEDA has grown since becoming a CNCF Incubation project
 
@@ -89,6 +89,7 @@ Over the past year, we've introduced a variety of improvements to our governance
 - [ ] ACA GA based on KEDA - https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-container-apps-general-availability/ba-p/3416885
 - [ ] Managed offerings (RedHat / AKS)
 
+11 -> 34 (210% growth)
 ![End-users from CNCF Incubation proposal](https://raw.githubusercontent.com/kedacore/governance/main/cncf/graduation/keda-end-users-from-incubation-proposal.jpg)
 
 ![End-users](https://raw.githubusercontent.com/kedacore/governance/main/cncf/graduation/end-users-august-2022.png)
