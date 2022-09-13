@@ -49,41 +49,44 @@ While KEDA handles the 0 -> 1 & 1 -> 0 scaling, it fully relies on the HPA for a
 
 Since KEDA was accepted as a CNCF Incubation project, we have been working hard to improve the project and have done 6 releases since then (v2.3 and newer).
 
-Every release introduced new scalers and different options to authenticate to external systems and have seen a lot of growth in this area.
+Every release introduced **new scalers and different options to authenticate to external systems** and have seen a lot of growth in this area.
 
-For example, KEDA v2.8 now supports 9 authentication providers (50% growth), including major cloud providers and HashiCorp Vault.
+For example, KEDA v2.8 now supports **9 authentication providers (50% growth)**, including major cloud providers and HashiCorp Vault.
 
 ![Authentication Provider Growth](https://raw.githubusercontent.com/kedacore/governance/main/cncf/graduation/auth-provider-growth.png)
 
-Our scaler catalog has grown from 32 to 51 scalers (60% growth) in 6 releases:
+**Our scaler catalog has grown from 32 to 51 scalers (60% growth)** in 6 releases:
 
 ![Scaler Growth](https://raw.githubusercontent.com/kedacore/governance/main/cncf/graduation/scaler-growth.png)
 
-As part of this effort, we have integrated Artifact Hub as our centralized place for external scalers to build an ecosystem for external scalers.
+As part of this effort, we have **integrated Artifact Hub as our centralized place for external scalers** to build an ecosystem for external scalers.
 
-- [ ] Image signing with Cosign (https://github.com/kedacore/keda/issues/2386)
-- [ ] ARM Support
-- [ ] Pausing autoscaling
-- [ ] Fallback support
-- [ ] Idle support
-- [ ] KEDA is secure-by-default and runs as non-root
-- [ ] Support for permission segregation when using Azure AD Pod / Workload Identity
-- Something on docs (searching scalers, external, auth providers)
+As part of our goal to make autoscaling dead-simple, we've introduced a new range of features to provide more control over the scaling process:
+
+- **Pausing of autoscaling** allows end-users to pause autoscaling for a specific workload to perform maintenance or other operations, without having to delete the `ScaledObject` or `ScaledJob` (~their autoscaling rules).
+- **Fallback support** enables users to define a fallback value for when the scaler is unable to get metrics from the external system. This allows them to avoid scaling down because of a dependency issue and keep their platform up-and-running.
+- **Support for idle** lets applications scale to 0 when there is no work to do, but use a minimum amount of replicas that is 1 or more. This allows users to save cost, but still have a decent chunk of replicas running once work starts.
+
+We have also made significant investment in enabling new deployment scenarios by providing **support for ARM machines** and are **signing all new container images with [Cosign](https://github.com/sigstore/cosign)** to verify their integrity.
+
+Our end-users can now benefit from security improvements that we have done now that **KEDA is secure-by-default and runs as non-root**, regardless if it's deployed through official Helm chart or raw YAML manifests. Additionally, Azure customers can now use permission segregation across the cluster so that team can use dedicated Azure AD identities. This is supported for both Azure AD Pod Identity as well as Azure AD Workload Identity.
+
+Our documentation has also seen a lot of improvements, with **listing of external scalers from Artifact Hub**, capability to **search across our scaler catalog**, dedicated page **around support in KEDA and managed offerings** and last but not least, **every authentication provider has a dedicated page**, similar to the scalers.
 
 ### Introducing transparency & guidance around how KEDA is governed
 
 Over the past year, we've introduced a variety of improvements to our governance model to make it more transparent and better reflect the community's needs in terms of expectations and building product-grade software:
 
-- We have introduced a more [in-depth roadmap](https://github.com/orgs/kedacore/projects/2) so that our community better understands our current priorities and what to expect in the next release. This initiative comes with [dedicated guidance](https://github.com/kedacore/keda/blob/main/ROADMAP.md) on how to use our roadmap, how we triage issues and when to expect new KEDA versions.
-- Our [scaler governance](https://github.com/kedacore/governance/blob/main/SCALERS.md) provides clarity on when a scaler should be built-in or external, how the community can contribute to our scaler ecosystem and what to expect in terms of maintenance
-- Our [support policy is now on keda.sh](https://keda.sh/support/) and provides clarity on what to expect in terms of support and how to get help. This includes helping end-users use one of the [existing offerings with commercial support](https://keda.sh/support/#commercial-support).
-- Based on the CNCF Incubation feedback, we've [changed our voting process](https://github.com/kedacore/governance/blob/main/GOVERNANCE.md) so that multiple maintainers from a single company share the same vote.
-- A [release policy](https://github.com/kedacore/governance/blob/main/RELEASES.md) was introduced, based on end-user feedback in CNCF Incubation reviews,
-- Our security policy and preventive measures are now [documented](https://github.com/kedacore/keda/blob/main/SECURITY.md) and have made improvements in this area:
+- We have introduced a more **[in-depth roadmap](https://github.com/orgs/kedacore/projects/2)** so that our community better understands our current priorities and what to expect in the next release. This initiative comes with [dedicated guidance](https://github.com/kedacore/keda/blob/main/ROADMAP.md) on how to use our roadmap, how we triage issues and when to expect new KEDA versions.
+- Our **[scaler governance](https://github.com/kedacore/governance/blob/main/SCALERS.md)** provides clarity on when a scaler should be built-in or external, how the community can contribute to our scaler ecosystem and what to expect in terms of maintenance
+- Our **[support policy is now on keda.sh](https://keda.sh/support/)** and provides clarity on what to expect in terms of support and how to get help. This includes helping end-users use one of the [existing offerings with commercial support](https://keda.sh/support/#commercial-support).
+- Based on the CNCF Incubation feedback, we've **[changed our voting process](https://github.com/kedacore/governance/blob/main/GOVERNANCE.md)** so that multiple maintainers from a single company share the same vote.
+- A [release policy](https://github.com/kedacore/governance/blob/main/RELEASES.md) was introduced, based on end-user feedback in CNCF Incubation reviews
+- Our **security policy and preventive measures are now [documented](https://github.com/kedacore/keda/blob/main/SECURITY.md) and have made improvements** in this area:
   - Automatically scan published images & Dockerfile in PRs with Snyk
   - Use Whitesource Bolt for GitHub & Trivy to find vulnerabilities in dependencies
   - Use GitHub Advanced Security to scan for vulnerabilities in code and identify vulnerabilities based on GitHub Advisory Database
-- A new [breaking changes & deprecations policy](https://github.com/kedacore/governance/pull/70) is being finalized to provide clarity on what end-users can expect and put guard rails on the changes contributors are allowed to make.
+- A **new [breaking changes & deprecations policy](https://github.com/kedacore/governance/pull/70)** is being finalized to provide clarity on what end-users can expect and put guard rails on the changes contributors are allowed to make.
 
 ### KEDA has grown to an industry-leading app autoscaler
 
@@ -102,10 +105,10 @@ KEDA has a growing community of adopters and contributors that help to make KEDA
 
 To help our community keep on doing that, we've been working hard to make KEDA more accessible to contributors in a few areas:
 
-- We've made it simpler to get started by expanding our [contribution guide](https://github.com/kedacore/keda/blob/main/CONTRIBUTING.md), improve our [docs for adding new scalers](https://github.com/kedacore/keda/blob/main/CREATE-NEW-SCALER.md) as well as make it simpler to do documentation improvements by [providing more documentation in our README](https://github.com/kedacore/keda-docs)
-- When contributors are ready to start writing code, they can now easily create a GitHub Codespace that is fully configured and ready to be used according to our coding standards & needs
-- Our end-to-end tests have been migrated from Typescript to Go, making it easier for contributors as they can re-use their existing knowledge and skills instead of having to learn another language
-- As part of the pull request, maintainers & contributors can now easily trigger a full end-to-end test run by using comments to trigger the process, or only start them for a subset of scalers
+- We've made it simpler to get started by **expanding our [contribution guide](https://github.com/kedacore/keda/blob/main/CONTRIBUTING.md)**, improve our [docs for adding new scalers](https://github.com/kedacore/keda/blob/main/CREATE-NEW-SCALER.md) as well as make it simpler to do documentation improvements by [providing more documentation in our README](https://github.com/kedacore/keda-docs)
+- When contributors are ready to start writing code, they can now **easily create a GitHub Codespace that is fully configured** and ready to be used according to our coding standards & needs
+- Our **end-to-end tests have been migrated from Typescript to Go**, making it easier for contributors as they can re-use their existing knowledge and skills instead of having to learn another language
+- As part of the pull request, **maintainers & contributors can now easily trigger a full end-to-end test run by using comments** to trigger the process, or only start them for a subset of scalers
 - When contributors have questions during development, they can now easily ask them in our [Slack workspace](https://slack.k8s.io/) and get help from our community and maintainers with our dedicated #keda-dev channel
 
 ## Graduation State Criteria
