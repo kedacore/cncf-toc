@@ -90,14 +90,25 @@ Over the past year, we've introduced a variety of improvements to our governance
 
 ### KEDA has grown to an industry-leading app autoscaler
 
-- [ ] Adoption
-- [ ] ACA GA based on KEDA - https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-container-apps-general-availability/ba-p/3416885
-- [ ] Managed offerings (RedHat / AKS)
+Over the past couple of years, we've had the pleasure of seeing KEDA grow from an open-source projects that end-users started to play around with to an industry-leading app autoscaler.
 
-11 -> 34 (210% growth)
+As an example, we have published a [blog post](https://keda.sh/blog/2021-04-06-why-alibaba-cloud-uses-keda-for-app-autoscaling/) on how and why **[Alibaba Cloud](https://alibabacloud.com) decided to use KEDA to scale their [Enterprise Distributed Application Service (EDAS)](https://www.alibabacloud.com/product/edas) offering**. Later on, [CastAI followed to help their customers **optimize cloud cost and reduce their environmental footprint**](https://keda.sh/blog/2021-08-04-keda-cast-ai/).
+
+Dysnix has built **[PredictKube, an AI-based predictive autoscaler](https://keda.sh/blog/2022-02-09-predictkube-scaler/), that is built on top of KEDA** to scale workloads in advance to coop with the upcoming load. We have also seen [KEDA being adopted by large corporations such as Zapier](https://keda.sh/blog/2022-03-10-how-zapier-uses-keda/) to scale their platform and significantly improve their performance.
+
+**Cloud providers are starting to build new offerings that are using open-source technologies (such as KEDA)** and leverage it to their customers, for example [Azure Container Apps that went generally available in 2022](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-container-apps-general-availability/ba-p/3416885).
+
+Lastly, vendors have started seeing the adoption of KEDA as well and have started providing **commercial support for KEDA**, such as [Red Hat](https://cloud.redhat.com/blog/custom-metrics-autoscaler-on-openshift) and [Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/keda-about).
+
+As an example of our growth in terms of end-users, when we have opened our proposal for KEDA to become a CNCF Incubation project on March 25th 2021 we had 11 listed end-users:
+
 ![End-users from CNCF Incubation proposal](https://raw.githubusercontent.com/kedacore/governance/main/cncf/graduation/keda-end-users-from-incubation-proposal.jpg)
 
+In little over a year, **we have grown to 34 listed end-users past August 2022 which is a 210% growth**:
+
 ![End-users](https://raw.githubusercontent.com/kedacore/governance/main/cncf/graduation/end-users-august-2022.png)
+
+And there are major KEDA adopters from the gaming and retail industry that we are eager to talk about, but cannot share them publicly because of legal reasons. However, we should be able to get in contact for anonymous interviews if there is interest.
 
 ### Making KEDA more accessible to contributors
 
