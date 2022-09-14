@@ -42,6 +42,7 @@ Here is a list of the CNCF projects that KEDA integrates with and some that we a
 - The scaler catalog supports a [variety of cloud-native technologies](https://keda.sh/docs/latest/scalers/) including Prometheus & NATS from the CNCF or Cassandra & Apache Kafka from the Apache Software Foundation
 - KEDA provides [Prometheus metrics](https://keda.sh/docs/latest/operate/prometheus/) to operate the autoscaling infrastructure
 - [Artifact Hub provides support for adding external KEDA scalers](https://artifacthub.io/docs/topics/repositories/keda-scalers/) which are [discoverable in our documentation](https://keda.sh/docs/latest/scalers/)
+- [Knative](https://knative.dev/) is prototyping an integration with KEDA to enable [autoscaling of Knative Eventing infrastructure](https://github.com/knative-sandbox/eventing-autoscaler-keda).
 - We are actively collaborating with the [Environmental Sustainability TAG](https://github.com/cncf/wg-env-sustainability) as we are on a mission to help reduce the environmental footprint of Kubernetes workloads.
   - We have been working in this area already with scale-to-zero, but are planning to expand our features in this area in the future based on this collaboration
 - In the future, we are planning to expand these integrations
