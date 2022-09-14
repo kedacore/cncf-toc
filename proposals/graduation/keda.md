@@ -123,6 +123,7 @@ To help our community keep on doing that, we've been working hard to make KEDA m
 
 - We've made it simpler to get started by **expanding our [contribution guide](https://github.com/kedacore/keda/blob/main/CONTRIBUTING.md)**, improve our [docs for adding new scalers](https://github.com/kedacore/keda/blob/main/CREATE-NEW-SCALER.md) as well as make it simpler to do documentation improvements by [providing more documentation in our README](https://github.com/kedacore/keda-docs)
 - When contributors are ready to start writing code, they can now **easily create a GitHub Codespace that is fully configured** and ready to be used according to our coding standards & needs
+- It is now easier for contributors to debug our metric server based on our [new debugging documentation](https://github.com/kedacore/keda/blob/main/BUILD.md#debugging-with-vs-code)
 - Our **end-to-end tests have been migrated from Typescript to Go**, making it easier for contributors as they can re-use their existing knowledge and skills instead of having to learn another language
 - As part of the pull request, **maintainers & contributors can now easily trigger a full end-to-end test run by using comments** to trigger the process, or only start them for a subset of scalers
 - When contributors have questions during development, they can now easily ask them in our [Slack workspace](https://slack.k8s.io/) and get help from our community and maintainers with our dedicated #keda-dev channel
