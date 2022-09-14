@@ -128,6 +128,15 @@ To help our community keep on doing that, we've been working hard to make KEDA m
 - As part of the pull request, **maintainers & contributors can now easily trigger a full end-to-end test run by using comments** to trigger the process, or only start them for a subset of scalers
 - When contributors have questions during development, they can now easily ask them in our [Slack workspace](https://slack.k8s.io/) and get help from our community and maintainers with our dedicated #keda-dev channel
 
+These investments have proven to be valuable as our [recent Q2 2022 media and velocity report](https://app2.cision.com/report?id=3cded81d-b3c1-4fd6-a436-24b77945f788) showed that 28 companies and 136 developers are contributing to KEDA during Q2.
+
+Here are some details of the various companies that have contributed to KEDA during Q2:
+![Company contributions in 2022 Q2](https://raw.githubusercontent.com/kedacore/governance/main/cncf/graduation/contributing-companies.png)
+
+Since the joining the CNCF as a sandbox project, we've seen a steady growth in people forking and/or starring while keeping open issues and PRs under control:
+
+![Community Stats](https://raw.githubusercontent.com/kedacore/governance/main/cncf/graduation/community-stats.png)
+
 ## Graduation State Criteria
 _Project should address each graduation criteria listed below_
 
